@@ -1,0 +1,1 @@
+Quando eu souber mais sobre PHP saberei para onde estao sendo enviados essas informações.
