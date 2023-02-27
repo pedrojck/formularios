@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #enviar{
+            background-color: rgb(0, 97, 0);
+            color: rgb(255, 255, 255);
+            border-radius: 10%;
+            padding: 5px;
+        }
+        #limpar{
+            background-color: rgb(255, 251, 0);
+            color: rgb(0, 0, 0);
+            border-radius: 10%;
+            padding: 5px;
+        }
+        fieldset{
+            background-color: lightblue;
+            border-radius: 3%;
+            margin: auto;
+        }
+        legend{
+            background-color: rgb(93, 192, 225);
+            padding: 5px;
+            border-radius: 10%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="formulario.php" autocomplete="on" method="post">
+        <fieldset>
+            <legend>Selecione</legend>
+            <p>
+                <label for="iest">Estado:</label>
+                <select name="Estado" id="iest">
+                    <option value="" selected>--- Escolha ---</option>
+                    <optgroup label="Região Sudeste">
+                        <option value="MG">Minas Gerais</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="ES">Espirito Santo</option>
+                    </optgroup>
+                    <optgroup label="Região Nordeste">
+                        <option value="PE">Pernambuco</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="iprof">Profissão:</label>
+                <input type="text" name="prof" id="iprof" required list="lstprof">
+                <datalist id="lstprof">
+                    <option>Administrador</option>
+                    <option>Contabilista</option>
+                    <option>Desenvolvedor</option>
+                    <option>Suporte</option>
+                </datalist>
+            </p>
+            <p>
+                <label for="imsg">Mensagem:</label><br>
+                <textarea name="msg" id="imsg" cols="65" rows="5"></textarea>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Submit" id="enviar">
+            <input type="reset" value="Limpar" id="limpar">
+        </p>
+    </form>
+    
+</body>
+</html>
