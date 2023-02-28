@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+
+    <form action="formulario.php" method="post" autocomplete="on">
+    
+        <fieldset>
+            <legend>Pesquisa</legend>
+            <p>
+                <label for="isat">Satisfação:</label>
+                <input type="range" name="sat" id="isat" min="0" max="100" required value="100" oninput="iresult.innerHTML = Number(value)">
+                <output name="result" id="iresult">100</output>
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Multiplicador</legend>
+
+            <p>
+                <label for="ivalor1">Valor 1</label>
+                <input type="number" name="v1" id="iv1" oninput="iresultx.innerHTML = Number(iv1.value) * Number(iv2.value)">
+                <br>
+                <p style="padding-left: 18px;">X</p>
+                <label for="ivalor2">Valor 2</label>
+                <input type="number" name="v2" id="iv2" oninput="iresultx.innerHTML = Number(iv1.value) * Number(iv2.value)">
+                <br>
+                <br>
+                
+
+                    <label for="iresultx">O resultado é:</label>
+                    <output name="resultx" id="iresultx">0</output>
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+
+        </fieldset>
+
+        
+    
+    </form>
+    
+</body>
+</html>
